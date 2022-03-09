@@ -23,7 +23,7 @@ function setup() {
   frameRate(80);
 
   ground = new Base(0, height - 10, width * 2, 20, "#795548", true);
-  leftWall = new Base(300, height / 2 + 50, 600, 100, "#8d6e63", true);
+  leftWall = new Base(100, height / 2 + 50, 600, 100, "#8d6e63", true);
   rightWall = new Base(width - 300, height / 2 + 50, 600, 100, "#8d6e63", true);
   
   bridge = new Bridge(15, { x: width / 2 - 400, y: height / 2 });
