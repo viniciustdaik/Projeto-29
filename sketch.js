@@ -25,15 +25,18 @@ function setup() {
   ground = new Base(0, height - 10, width * 2, 20, "#795548", true);
   leftWall = new Base(100, height / 2 + 50, 600, 100, "#8d6e63", true);
   rightWall = new Base(width - 300, height / 2 + 50, 600, 100, "#8d6e63", true);
+  leftWall.color = "green";
+  rightWall.color = "green";
+  ground.color = "yellow";
   
-  bridge = new Bridge(15, { x: width / 2 - 400, y: height / 2 });
+  bridge = new Bridge(16, { x: width / 2 - 400, y: height / 2 });//15, {x:width/2-400, y:height/2}
   jointPoint = new Base(width - 600, height / 2 + 10, 40, 20, "#8d6e63", true);
   
   Matter.Composite.add(bridge.body, jointPoint);
   
   jointLink = new Link(bridge, jointPoint);
 
-  for (var i = 0; i <= 8; i++) {
+  for (var i = 1; i <= 5; i++) {//i = 0; i <= 8
     var x = random(width / 2 - 200, width / 2 + 300);
     var y = random(-10, 140);
     var stone = new Stone(x, y, 80, 80);
@@ -42,7 +45,7 @@ function setup() {
 }
 
 function draw() {
-  background(51);
+  background("purple");//51
   Engine.update(engine);
 
   ground.show();
