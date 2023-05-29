@@ -18,7 +18,8 @@ class Stone {
     translate(pos.x, pos.y);
     strokeWeight(1);
     //fill("white");
-    fill('gray');
+    stroke("lightblue");
+    fill('orange');//gray
     ellipseMode(CENTER);
     ellipse(0, 0, this.w, this.h);
     noStroke();
